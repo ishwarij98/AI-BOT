@@ -1,0 +1,73 @@
+/* ===== Google Fonts (already in HTML) ===== */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #1b1b1b;
+}
+
+/* ===== Chatbot Toggler Button ===== */
+#chatbot-toggler {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #fff;
+  color: #4f4f4f;
+  font-size: 24px;
+  padding: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  z-index: 1000;
+}
+
+/* ===== Chatbot Popup ===== */
+.chatbot-popup {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  width: 350px;
+  max-width: 90%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.2);
+  transition: all 0.25s ease-in-out;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+body.show-chatbot .chatbot-popup {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+/* ===== Chat Header ===== */
+.chat-header {
+  background: #2a2a2a;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* ===== Chat Body ===== */
+.chat-body {
+  padding: 12px;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 400px;
+  background: #f4f4f4;
+}
+
+
